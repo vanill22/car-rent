@@ -23,8 +23,10 @@ services:
     db:
         image: mysql:8.0
         restart: always
+        env_file:
+            - .env
         volumes:
-            - ./storage/db:/var/lib/mysql
+            - ./.storage/db:/var/lib/mysql
         environment:
             MYSQL_DATABASE: laravel
             MYSQL_ROOT_PASSWORD: root
