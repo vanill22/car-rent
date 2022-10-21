@@ -26,7 +26,7 @@ services:
         volumes:
             - ./storage/db:/var/lib/mysql
         environment:
-            MYSQL_DATABASE: labreri
+            MYSQL_DATABASE: laravel
             MYSQL_ROOT_PASSWORD: root
         ports:
             - "3306:3306"
