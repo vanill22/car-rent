@@ -5,8 +5,12 @@ namespace App\Http\Controllers;
 use App\Models\CarUser;
 use Illuminate\Http\Request;
 
-class CarUserController extends Controller
+class CarController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth:api');
+    }
     /**
      * Display a listing of the resource.
      *
