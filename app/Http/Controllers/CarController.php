@@ -12,6 +12,26 @@ class CarController extends Controller
         $this->middleware('auth:api');
     }
     /**
+     *
+     * @OA\Get(
+     *      path="/cars",
+     *      operationId="getCarlist",
+     *      tags={"Cars"},
+     *      summary="Get list of cars",
+     *      description="Returns list of cars",
+     *      @OA\Response(
+     *          response=200,
+     *          description="Successful operation",
+     *       ),
+     *      @OA\Response(
+     *          response=401,
+     *          description="Unauthenticated",
+     *      ),
+     *      @OA\Response(
+     *          response=403,
+     *          description="Forbidden"
+     *      )
+     *     )
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
